@@ -1,0 +1,351 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url(fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf) format("truetype");
+}
+
+:root
+{
+	--vanquera-accent:#ffd711; /* Yellow | To reference, use var(--vanquera-accent) */
+	--vanquera-accent-dark:#caa200;
+	--body-bg-color:#3B3735;
+	--body-light:#413C3A;
+	--body-dark:#312D2B;
+	--quote-text:#ACABAA;
+	--context-blue:#615C7A; /* A dark blueish color, modified body-light */
+	--invisible:#FFFFFF00;
+	--visible:#FFFFFFFF;
+}
+
+body
+{
+	background-color:black;
+	background-image:url('/background.png');
+	background-size:cover;
+}
+
+.wrapper
+{
+	width:80%;
+	margin:auto;
+	margin-top:100px;
+	min-width:800px;
+	max-width:1200px;
+	background-color:var(--body-bg-color);
+	padding-top:20px;
+	padding-bottom:100px;
+	padding-left:20px;
+	padding-right:20px;
+	border-radius:25px;
+	border-style:double;
+	border-width:8px 10px; /* top and bottom, sides */
+	border-color:var(--body-light) var(--body-dark) var(--body-dark) var(--body-light); /* Top, right, bottom, left */
+}
+
+.center
+{
+	text-align:center;
+}
+
+.small-title /* For the welcome text above the main title on the home page */
+{
+	font-size:20px;
+	text-align:center;
+}
+
+.main-title /* For the big title on the home page | currently unused */
+{
+	font-size:50px;
+	text-align:center;
+}
+
+nav
+{
+	text-align:center;
+	background-color:white;
+	background-image:url('Header BG.png');
+	background-size:300%;
+	padding:5px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:25;
+}
+
+nav a
+{
+	color:black;
+	padding:5px 40px;
+}
+
+nav a:hover
+{
+	/*color:var(--vanquera-accent);*/
+	background-color:white;
+	border-radius:5px;
+	border:5px var(--body-bg-color) solid;
+}
+
+li {
+  float: left;
+  list-style-type: none;
+  justify-content: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:white;
+  min-width: 200px;
+  max-width:1000px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:10px;
+  z-index: 45;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+	background-color:white;
+	border-radius:5px;
+	border:5px var(--body-bg-color) solid;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+li.sub-dropdown {
+	display: inline-block;
+}
+
+.sub-dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:white;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius:10px;
+	z-index: 50;
+}
+
+.sub-dropdown-content a {
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.sub-dropdown-content a:hover 
+{
+	background-color:white;
+	border-radius:5px;
+	border:5px var(--body-bg-color) solid;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+	display: block;
+}
+
+a
+{
+	color:var(--vanquera-accent);
+}
+
+a:hover
+{
+	color:var(--vanquera-accent-dark);
+}
+
+a.image-link
+{
+	color:var(--invisible);
+}
+
+a.image-link:hover
+{
+	color:var(--invisible);
+}
+
+.home-section
+{
+	margin:20px;
+	padding:10px;
+	background-image:url('Space Vanquera.png');
+	background-size: cover;
+	background-color:grey;
+	border-radius:25px;
+	border:double white 5px;
+}
+
+.art-cred
+{
+	font-style:italic;
+	font-size:0.8em;
+}
+
+.quote, .quote p
+{
+	color: var(--quote-text);
+	margin:20px 200px;
+	/*text-decoration:underline;*/
+	background-color:var(--body-dark);
+	border-radius:10px;
+	padding:20px 80px;
+	font-style:italic;
+	position:relative;
+	border-left:5px solid white;
+	border-right:5px solid white;
+}
+
+/* Top-left quote */
+.quote::before 
+{
+	content: "“";
+	left:0.75em;
+}
+
+/* Top-right quote */
+.quote::after 
+{
+	content: "”";
+	right:0.75em;
+}
+
+.quote::before, .quote::after
+{
+	position:absolute;
+	color: var(--vanquera-accent);
+	top:0.5em;
+	font-size: 2.5em;
+}
+
+.quote-speaker
+{
+	position:absolute;
+	bottom:10px;
+	right:20px;
+	font-size:1em;
+}
+
+.special-quote
+{
+	color: var(--quote-text);
+	margin:20px 200px;
+	/*text-decoration:underline;*/
+	background-color:var(--body-dark);
+	border-radius:10px;
+	border:double white 5px;
+	padding:20px 80px;
+	font-style:italic;
+}
+
+/* Top quote */
+.special-quote::before {
+	content: "--- ";
+	color: var(--vanquera-accent);
+	font-size: 2em;
+}
+
+/* Bottom quote */
+.special-quote::after {
+	content: " ---";
+	color: var(--vanquera-accent);
+	font-size: 2em;
+}
+
+.context
+{
+	border-left: 8px solid CornflowerBlue;
+	background-color:var(--context-blue);
+	font-family:RobotoSlab;
+	font-weight:100;
+	margin:5px 40px; /* top and bottom, sides */
+	padding:5px 20px; /* top and bottom, sides */
+	font-style:italic;
+	color:white;
+}
+
+p:not(.special-quote, .quote)
+{
+	color:white;
+}
+
+h1
+{
+	color:black;
+	text-align:left;
+	/*text-decoration:underline;*/
+	background-color:white;
+	background-image:url('Header BG.png');
+	border-radius:10px;
+	border:double white 5px;
+	padding:5px;
+	padding-left:30px;
+	letter-spacing:10px;
+	font-family:RobotoSlab;
+	font-weight:normal;
+}
+
+h2
+{
+	text-decoration-line: underline;
+	color:white;
+}
+
+h3
+{
+	text-decoration-line: underline;
+	color:white;
+}
+
+h4
+{
+	color:white;
+	font-style:italic;
+}
+
+h5
+{
+	color:white;
+}
+
+h6
+{
+	color:grey;
+}
+
+character-aside {
+	display: block;
+	margin: 1.5rem 0;
+	color:white;
+	width:40%;
+	padding-left:15px;
+	padding-bottom:10px;
+	float:right;
+	background-color:var(--body-dark);
+}
+
+.character-card {
+	border: 3px solid var(--vanquera-accent);
+	border-radius:5px;
+	padding: 1rem;
+	background:var(--body-dark);
+}
+
+.character-card h2 {
+	margin-top: 0;
+}

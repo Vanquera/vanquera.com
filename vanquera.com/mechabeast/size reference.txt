@@ -1,0 +1,9 @@
+micro - bantam - moderate - giant - titan - leviathon - apex
+Micro is the smallest class, classifying anything smaller than your thumbnail on average
+Bantam is the next size, ranging from palm-sized to roughly cat-sized (outstretched arm length)
+Moderate is that size to human-sized, allocating for a little larger
+Giant is anything around elephant sized, allocating for a little larger
+Titan is house-sized or larger
+Colossal is the size of several houses, up to the size of a city
+Leviathon is the size of a city or larger, possibly the size of a small nation
+Apex is the largest, which accounts for anything of incredible scale (ie continental, such as Mecha Majora)
